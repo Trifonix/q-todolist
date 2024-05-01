@@ -48,6 +48,10 @@
         </q-item-section>
       </q-item>
     </q-list>
+    <div v-if="!tasks.length" class="no-task absolute-center">
+      <q-icon name="check" size="120px" color="primary" />
+      <div class="text-h4 text-primary text-center">TaKe A ReSt</div>
+    </div>
   </q-page>
 </template>
 
@@ -57,18 +61,18 @@ export default {
     return {
       newTask: "",
       tasks: [
-        {
-          title: "qwe",
-          done: false,
-        },
-        {
-          title: "asd",
-          done: true,
-        },
-        {
-          title: "zxc",
-          done: false,
-        },
+        // {
+        //   title: "qwe",
+        //   done: false,
+        // },
+        // {
+        //   title: "asd",
+        //   done: true,
+        // },
+        // {
+        //   title: "zxc",
+        //   done: false,
+        // },
       ],
     };
   },
@@ -106,5 +110,8 @@ export default {
     text-decoration: line-through;
     color: $dark;
   }
+}
+.no-task {
+  opacity: 0.8;
 }
 </style>
