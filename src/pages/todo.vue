@@ -1,9 +1,9 @@
 <template>
   <q-page class="bg-red-3 column">
-    <q-list>
+    <q-list separator bordered>
       <q-item v-for="task in tasks" :key="task.title" v-ripple>
         <q-item-section avatar>
-          <q-checkbox v-model="color" val="teal" color="dark" />
+          <q-checkbox v-model="task.done" val="teal" color="dark" />
         </q-item-section>
         <q-item-section>
           <q-item-label>{{ task.title }}</q-item-label>
@@ -24,7 +24,7 @@ export default {
         },
         {
           title: "asd",
-          done: false,
+          done: true,
         },
         {
           title: "zxc",
