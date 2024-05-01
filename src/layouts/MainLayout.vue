@@ -161,6 +161,6 @@ export default defineComponent({
   opacity: 0.4;
 }
 .image {
-  background-color: $dark;
+  background-color: $dark-page;
 }
 </style>
