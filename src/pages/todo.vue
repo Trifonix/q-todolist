@@ -1,5 +1,20 @@
 <template>
   <q-page class="bg-red-3 column">
+    <div class="row q-pa-sm bg-primary">
+      <q-input
+        filled
+        class="col"
+        square
+        bg-color="white"
+        v-model="text"
+        placeholder="Add NeW TaSk"
+        dense
+      >
+        <template v-slot:append>
+          <q-btn round dense flat icon="add" />
+        </template>
+      </q-input>
+    </div>
     <q-list separator bordered>
       <q-item
         @click="task.done = !task.done"
